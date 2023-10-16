@@ -25,6 +25,7 @@ h3 {
 img{
     width: 22vw;
     margin-left: 30px;
+
 }
 
 
@@ -36,7 +37,7 @@ img{
 
 .encabezado{
     margin-top: 20px;
-    margin-bottom: 50px;
+    grid-area: encabezado;
 }
 
 
@@ -45,10 +46,13 @@ img{
 
 .navegador {
     display: flex;
-    margin-top: 20px;
     margin-bottom: 50px;
     justify-content: center;
     gap: 20px;
+}
+
+.nav-bar{
+    grid-area: nav;
 }
 
 li{
@@ -63,6 +67,16 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    animation: 0.5s infinite enlaces;
+}
+
+
+@keyframes enlaces{
+    0%{transform: scaleX(1,0);}
+    50% { transform: scaleX(1,15);}
+    100% {transform: scaleX(1,0);}
+}
 
 a:hover{
     color: white;
@@ -72,20 +86,23 @@ a:hover{
 
 
 
-.main{
-    display: grid;
-    grid-template-columns: 30% auto;
-    gap: 20px;
-}
 
 
 
 
 
 .aside {
+    margin-left: 10px;
     border-radius: 10px;
     border: rgb(56, 38, 38) solid;
     padding: 10px;
+    grid-area: aside;
+}
+
+.articulo{
+    grid-area: articulo;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 
@@ -97,4 +114,154 @@ a:hover{
     align-items: center;
     margin-top: 100px;
     margin-bottom: 50px;
+    grid-area: pie;
+}
+
+
+
+
+.contenedor{
+display: grid;
+grid-template-columns: 30% auto;
+grid-template-areas: 
+    "encabezado encabezado"
+    "nav nav"
+    "aside articulo"
+    "pie pie";
+}
+
+
+
+
+
+
+@media (max-width: 1000px){
+
+    .contenedor{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "encabezado"
+            "nav"
+            "articulo"
+            "aside"
+            "pie";
+
+    }
+
+    .bandas{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    img{
+        min-width: 400px;
+    }
+
+}
+
+
+@media (max-width:720px){
+    .contenedor{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "encabezado"
+            "nav"
+            "articulo"
+            "aside"
+            "pie";
+
+    }
+
+    .bandas{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    img{
+        min-width: 300px;
+    }
+}
+
+
+@media (max-width:600px){
+
+    
+    .contenedor{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "encabezado"
+            "nav"
+            "articulo"
+            "aside"
+            "pie";
+        }
+        
+        * {
+            background-color: #100806;
+            color: rgba(255, 255, 255, 0.678);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.85ex;
+            margin-left: 0;
+        }
+        
+        body{
+            margin-left: 0;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Young Serif', serif;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 2ex;
+        }
+
+        h5{
+            font-size: 1.8ex;
+        }
+
+    
+
+        .aside {
+            border-radius: 10px;
+            border: rgb(56, 38, 38) solid;
+            padding: 10px;
+            grid-area: aside;
+        }
+        
+        .articulo{
+            grid-area: articulo;
+    
+        }
+
+        .navegador {
+            display: flex;
+            margin-bottom: 50px;
+            justify-content: center;
+        }
+
+        nav ul li a{
+            font-size: 1.5ex;
+        }
+
+        .bandas{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        img{
+            min-width: 300px;
+        }
+
 }
