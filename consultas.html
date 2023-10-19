@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/cd381ad777.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+    <header class="encabezado">
+        <h1>Un recorrido musical desde los 80</h1>
+    </header>
+
+
+    <nav class="nav-bar">
+        <ul class="navegador">
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="./los80.html">Los años 80</a></li>
+            <li><a href="./los90.html">Los años 90</a></li>
+            <li><a href="./los00.html">Los años 00</a></li>
+            <li><a href="./consultas.html">Consultas</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <article class="artform">
+
+        <h3>FORMULARIO DE CONSULTAS</h3>
+        <P>Cualquier consulta o duda que pueda tener, o simplemente para comunicarse con nosotros, puede hacerlo en el
+            siguiente formulario de consultas.</P>
+
+        <form  action="https://formspree.io/f/xgejrgdk" method="POST" name="formulario" class="formulario">
+
+            <label for="nom">Nombre y apellido</label> <br>
+            <input type="text" name="nombre" id="nom" maxlength="30">
+
+            <br><br>
+
+            <label for="num">Edad</label> <br>
+            <input type="number" name="edad" id="num" maxlength="2">
+
+            <br><br>
+
+            <label for="email">Email</label> <br>
+            <input type="email" name="email" id="email">
+
+            <br><br>
+
+            <label for="motivo">Motivo de su consulta</label>
+            <select name="motivo" id="motivo">
+                <option value="seleccionar">Seleccionar</option>
+                <option value="critica">Crítica</option>
+                <option value="recomendacion">Recomendacion</option>
+                <option value="opinion">Opinion sobre la página</option>
+            </select>
+
+            <br><br>
+
+            Deje su consulta <br>
+            <textarea name="texto" id="" cols="30" rows="10" required></textarea>
+
+            <br><br><br>
+
+            <input type="button" name="" id="boton" value="ENVIAR" onclick="enviar()">
+      
+
+        </form>
+
+
+    </article>
+
+
+
+
+    <footer class="pie">
+      
+        <div>&copy; 2023</div>
+        <div><h3>Contactanos</h3></div>
+        <div class="icons">
+            <span><a href="" class="fab fa-whatsapp"></a></span>
+            <span><a href="" class="fab fa-facebook"></a></span>
+            <span><a href="" class="fab fa-instagram"></a></span>
+            <span><a href="" class="fas fa-envelope"></a></span>
+        </div>
+
+    </footer>
+
+ 
+
+    <script src="formulario.js"></script>
+</body>
+
+</html>
